@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incuti</title>
+    <link rel="icon" href="Image/logo.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontsawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <style>
+        @media (min-width: 768px) {
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        }
+        .dropdown-content {
+            position: absolute;
+            left: 0;
+            min-width: 200px;
+        }
+
+        .animate-fade-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hover\:scale-102:hover {
+        transform: scale(1.02);
+    }
+    </style>
+</head>
+<body class="bg-gray-950 font-sans">
+    <!-- header -->
+    <header class="bg-gray-900 px-4 md:px-20 shadow-lg shadow-sky-900/50 sticky top-0 z-50">
+        <nav class="container mx-auto flex flex-wrap justify-between items-center py-4">
+            <div class="flex items-center">
+                <a href="" class="flex items-center">
+                    <img src="Image/incuti.png" alt="Incuti Logo" class="w-12 md:w-16 h-auto">
+                    <span class="ml-2 text-xl font-bold text-white">Incuti</span>
+                </a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+    <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <ul class="hidden md:flex md:space-x-8 lg:space-x-14 w-full md:w-auto flex-col md:flex-row mt-4 md:mt-0 transition-all duration-300 ease-in-out" id="menu">
+                <li class="">
+                    <a href="index.html" class="block py-2 text-white hover:text-sky-500 transition duration-300 dropbtn">Company</a>
+                
+                </li>
+                <li>
+                    <a href="landing.html" class="block py-2 text-white hover:text-sky-500 transition duration-300">Models</a>
+                </li>
+                <li class="">
+                    <a href="pricing.html" class="block py-2 text-white hover:text-sky-500 transition duration-300 dropbtn">Pricing</a>
+                  
+                </li>
+           
+                <li>
+                    <a href="contact.html" class="block py-2 text-white hover:text-sky-500 transition duration-300">Contact us</a>
+                </li>
+                <li>
+                    <a href="faqs.html" class="block py-2 text-white hover:text-sky-500 transition duration-300">FAQs</a>
+                </li>
+            </ul>
+            <div class="w-full md:w-auto mt-4 md:mt-0">
+               <a href="" class="block w-full md:w-auto text-center bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition duration-300 font-semibold">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- After the header, add the following sections -->
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-gray-900 to-sky-900 text-white py-20">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Frequently Asked Questions</h1>
+            <p class="text-xl mb-8">Find answers to common questions about our AI-powered solutions</p>
+            
+        </div>
+
+        <div>
+            <img src="Image/incuti.png" alt="Incuti Logo" class="w-48 h-auto mr-8">
+        </div>
+       
+    </div>
+</section>
+
+    <!-- FAQ Section -->
+  <section class="container mx-auto my-10 px-4">
+      <h1 class="text-center font-medium text-white my-5 text-4xl animate-fade-in">Frequently Asked Questions</h1>
+      
+      <!-- Search Bar -->
+      <div class="max-w-xl mx-auto mb-8">
+          <div class="relative">
+              <input type="text" id="faq-search" placeholder="Search your question..." class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500 transition duration-300">
+              <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+          </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-sky-500 transition duration-300" data-category="all">All</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-sky-500 transition duration-300" data-category="general">General</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-sky-500 transition duration-300" data-category="technical">Technical</button>
+          <button class="category-btn px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-sky-500 transition duration-300" data-category="business">Business</button>
+      </div>
+
+      <div class="space-y-4" id="faq-container">
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+            <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq1', this)">
+                  <h3 class="text-xl text-white font-semibold">What is Incuti AI?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq1" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">Incuti AI is a cutting-edge artificial intelligence platform designed to help businesses and individuals leverage the power of AI for various applications and solutions.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq2', this)">
+                  <h3 class="text-xl text-white font-semibold">How can Incuti AI benefit my business?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq2" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">Incuti AI can help streamline your operations, improve decision-making processes, automate repetitive tasks, and provide valuable insights from your data, ultimately boosting efficiency and productivity.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq3', this)">
+                  <h3 class="text-xl text-white font-semibold">Is Incuti AI suitable for small businesses?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq3" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">Yes, Incuti AI offers scalable solutions that cater to businesses of all sizes, from startups to large enterprises. Our flexible pricing plans ensure that small businesses can access powerful AI tools within their budget.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq4',this)">
+                  <h3 class="text-xl text-white font-semibold">Do I need technical expertise to use Incuti AI?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq4" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">While some technical knowledge can be helpful, Incuti AI is designed with user-friendly interfaces and provides comprehensive documentation and support to help users of all skill levels leverage our AI capabilities effectively.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq5',this)">
+                  <h3 class="text-xl text-white font-semibold">How secure is my data with Incuti AI?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq5" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">We take data security very seriously. Incuti AI employs state-of-the-art encryption and security measures to protect your data. We are compliant with industry standards and regulations to ensure the privacy and integrity of your information.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq6', this)">
+                  <h3 class="text-xl text-white font-semibold">What industries can benefit from Incuti AI?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq6" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">Incuti AI's versatile solutions can benefit a wide range of industries, including healthcare, finance, retail, manufacturing, and more. Our AI tools can be customized to address specific industry challenges and requirements.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq7', this)">
+                  <h3 class="text-xl text-white font-semibold">What kind of support does Incuti AI offer?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq7" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">Incuti AI provides comprehensive support, including detailed documentation, video tutorials, email support, and live chat assistance. Our dedicated support team is always ready to help you make the most of our AI platform.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900 shadow-md rounded-lg transform hover:scale-102 transition duration-300">
+              <button class="w-full text-left p-4 focus:outline-none flex justify-between items-center" onclick="toggleDropdown('faq8', this)">
+                  <h3 class="text-xl text-white font-semibold">Can I integrate Incuti AI with my existing systems?</h3>
+                  <i class="fas fa-chevron-right text-sky-500 transition-transform duration-300"></i>
+              </button>
+              <div id="faq8" class="hidden p-4 bg-gray-800 rounded-b-lg transform transition-all duration-300">
+                  <p class="text-gray-300 text-lg">Yes, Incuti AI is designed to be easily integrated with a variety of existing systems and platforms. We offer APIs and SDKs to facilitate seamless integration with your current infrastructure, ensuring a smooth adoption process.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Still Have Questions -->
+      <div class="text-center mt-12 p-8 bg-gray-800 rounded-lg">
+          <h3 class="text-2xl text-white font-semibold mb-4">Still Have Questions?</h3>
+          <p class="text-gray-300 mb-6">We're here to help! Contact our support team for assistance.</p>
+          <a href="contact.html" class="inline-block px-8 py-3 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition duration-300">Contact Support</a>
+      </div>
+  </section>
+
+
+
+
+    <!-- Footer -->
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">About Incuti</h3>
+                <p>Empowering businesses with AI solutions.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-sky-500">Home</a></li>
+                    <li><a href="#" class="hover:text-sky-500">Services</a></li>
+                    <li><a href="#" class="hover:text-sky-500">About Us</a></li>
+                    <li><a href="#" class="hover:text-sky-500">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p>Email: info@incuti.ai</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-sky-500">
+                        <i class="fab fa-facebook-f w-5 h-6 text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-sky-500">
+                        <i class="fab fa-instagram w-5 h-6 text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-sky-500">
+                        <i class="fab fa-x-twitter w-5 h-6 text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <p>&copy; 2023 Incuti AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+
+        // mobile responsive 
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+
+    //   // FAQ dropdowns
+    function toggleDropdown(id, button) {
+    var element = document.getElementById(id);
+    element.classList.toggle('hidden');
+    
+    var icon = button.querySelector('i');
+    if (element.classList.contains('hidden')) {
+        icon.classList.remove('fa-chevron-down', 'transform', 'rotate-90');
+        icon.classList.add('fa-chevron-right');
+    } else {
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-down', 'transform', 'rotate-90');
+    }
+}
+
+function toggleDropdown(id, button) {
+        const content = document.getElementById(id);
+        const icon = button.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(90deg)';
+    }
+
+    // Search functionality
+    document.getElementById('faq-search').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const faqItems = document.querySelectorAll('#faq-container > div');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('h3').textContent.toLowerCase();
+            const answer = item.querySelector('p').textContent.toLowerCase();
+            
+            if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    // Category filtering
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Add active state to button
+            document.querySelectorAll('.category-btn').forEach(b => {
+                b.classList.remove('bg-sky-500');
+            });
+            this.classList.add('bg-sky-500');
+            
+            // Show/hide relevant FAQs based on category
+            // You would need to add data-category attributes to your FAQ items
+            // and implement the filtering logic here
+        });
+    });
+
+
+    </script>
+</body>
+</html>

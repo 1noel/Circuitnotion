@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incuti</title>
+    <link rel="icon" href="Image/logo.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontsawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <style>
+        @media (min-width: 768px) {
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        }
+        .dropdown-content {
+            position: absolute;
+            left: 0;
+            min-width: 200px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 font-sans">
+    <!-- header -->
+    <header class="bg-gray-900 px-4 md:px-20 shadow-md shadow-sky-900/50 sticky top-0 z-50">
+        <nav class="container mx-auto flex flex-wrap justify-between items-center py-4">
+            <div class="flex items-center">
+                <a href="" class="flex items-center">
+                    <img src="Image/incuti.png" alt="Incuti Logo" class="w-12 md:w-16 h-auto">
+                    <span class="ml-2 text-xl font-bold text-white">Incuti</span>
+                </a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+    <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <ul class="hidden md:flex md:space-x-8 lg:space-x-14 w-full md:w-auto flex-col md:flex-row mt-4 md:mt-0 transition-all duration-300 ease-in-out" id="menu">
+                <li class=""> <!-- dropdown relative group-->
+                    <a href="index.html" class="block py-2 text-white hover:text-sky-500 transition duration-300 dropbtn">Company</a>
+                    <div class="dropdown-content hidden bg-gray-900 shadow-lg z-10 mt-2 rounded-md overflow-hidden">
+                        <!-- <a href="#" class="block px-4 py-2 text-white hover:bg-sky-500 hover:text-white transition duration-300">About Us</a>
+                        <a href="#" class="block px-4 py-2 text-white hover:bg-sky-500 hover:text-white transition duration-300">Careers</a>
+                        <a href="#" class="block px-4 py-2 text-white hover:bg-sky-500 hover:text-white transition duration-300">Blog</a> -->
+                    </div>
+                </li>
+                <li>
+                    <a href="landing.html" class="block py-2 text-white hover:text-sky-500 transition duration-300">Models</a>
+                </li>
+                <li class="">
+                    <a href="pricing.html" class="block py-2 text-white hover:text-sky-500 transition duration-300 dropbtn">Pricing</a>
+                    
+                </li>
+                <li>
+                    <a href="contact.html" class="block py-2 text-white hover:text-sky-500 transition duration-300">Contact us</a>
+                </li>
+                <li>
+                    <a href="faqs.html" class="block py-2 text-white hover:text-sky-500 transition duration-300">FAQs</a>
+                </li>
+            </ul>
+            <div class="w-full md:w-auto mt-4 md:mt-0">
+               <a href="" class="block w-full md:w-auto text-center bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition duration-300 font-semibold">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- After the header, add the following sections -->
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-gray-900 to-sky-900 text-white py-20">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
+            <p class="text-xl mb-8">Empowering businesses through cutting-edge technology solutions, from AI and web development to digital transformation and cloud computing</p>
+            
+        </div>
+
+        <div>
+            <img src="Image/incuti.png" alt="Incuti Logo" class="w-48 h-auto mr-8">
+        </div>
+       
+    </div>
+</section>
+
+
+<!-- about us -->
+ <section class="md:container md:mx-auto py-12 mx-5">
+    <h2 class="text-4xl font-bold mb-8 text-center text-white"><u class="decoration-orange-500">Who We Are</u></h2>
+    <div class="text-center">
+        <p class="text-gray-100 text-lg leading-relaxed max-w-4xl mx-auto">
+            CircuitNotion is a pioneering company dedicated to transforming industries across Africa with advanced AI technologies and innovative software solutions. We are committed to empowering businesses, driving technological progress, and fostering sustainable growth.
+        </p>
+    </div>
+</section>
+
+<!-- Services section -->
+<section class="md:container md:mx-auto py-12 mx-5">
+
+    <h2 class="text-4xl font-bold mb-8 text-center text-white"> Our Services</u></h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-900/50 shadow-sky-600 rounded-lg  shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+            <div>
+                <img src="Image/wh4.jpg" alt="Warehouse" class="w-full h-64 object-cover rounded-t-lg">
+            </div>
+              <div class="p-4"> 
+                  <h3 class="text-3xl font-bold text-sky-500 mt-4 text-center">Web Development & Hosting</h3>
+                  <p class="text-gray-100 text-lg mt-2">Professional web development services and reliable hosting solutions with advanced security features and scalability.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900/50 shadow-sky-600 rounded-lg  shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+            <div>
+                <img src="Image/ai1.jpg" alt="AI" class="w-full h-64 object-cover rounded-t-lg">
+            </div>
+              <div class="p-4">
+                  
+                  <h3 class="text-3xl font-bold text-sky-500 mt-4 text-center">AI Solutions</h3>
+                  <p class="text-gray-100 text-lg mt-2">Custom artificial intelligence solutions for business automation and decision-making processes.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900/50 shadow-sky-600 rounded-lg  shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+            <div>
+                <img src="Image/cns2.jpg" alt="Construction" class="w-full h-64 object-cover rounded-t-lg">
+            </div>
+              <div class="p-4">
+                  
+                  <h3 class="text-3xl font-bold text-sky-500 mt-4 text-center">Consulting Services</h3>
+                  <p class="text-gray-100 text-lg mt-2">Expert guidance and strategic consulting for digital transformation and AI implementation.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900/50 shadow-sky-600 rounded-lg  shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+            <div>
+                <img src="Image/mob1.jpg" alt="Mobile" class="w-full h-64 object-cover rounded-t-lg">
+            </div>
+              <div class="p-4">
+                  <h3 class="text-3xl font-bold text-sky-500 mt-4 text-center">Mobile Solutions</h3>
+                  <p class="text-gray-100 text-lg mt-2">Advanced mobile applications with integrated AI capabilities for seamless user experience.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900/50 shadow-sky-600 rounded-lg  shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+
+            <div>
+                <img src="Image/bs1.jpg" alt="Business" class="w-full h-64 object-cover rounded-t-lg">
+            </div>
+              <div class="p-4">
+                 
+                  <h3 class="text-3xl font-bold text-sky-500 mt-4 text-center">Business Intelligence</h3>
+                  <p class="text-gray-100 text-lg mt-2">Data-driven insights and analytics for strategic business decision making.</p>
+              </div>
+          </div>
+
+          <div class="bg-gray-900/50 shadow-sky-600 rounded-lg  shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+            <div class="">
+                <img src="Image/hlth1.jpg" alt="Healthcare" class="w-full h-64 object-cover rounded-t-lg">
+            </div>
+              <div class="p-4">
+                  <h3 class="text-3xl font-bold text-sky-500 mt-4 text-center">Healthcare Solutions</h3>
+                  <p class="text-gray-100 text-lg mt-2">AI-powered healthcare systems for improved patient care and medical diagnostics.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Vision and mission -->
+   <section class="py-16 bg-gray-900/30">
+       <div class="container mx-auto px-4">
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+               <!-- Vision -->
+               <div class="text-center p-8 shadow-sky-600 bg-gray-900/50 rounded-lg shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+                   <div class="mb-6">
+                       <i class="fas fa-eye text-5xl text-sky-500"></i>
+                   </div>
+                   <h2 class="text-4xl font-bold text-sky-500 mb-6">Our Vision</h2>
+                   <p class="text-gray-100 text-lg leading-relaxed">
+                    "To lead Africa into a new era of technological advancement, becoming the continent's most trusted 
+                    AI and software services provider."
+                   </p>
+               </div>
+   
+               <!-- Mission -->
+               <div class="text-center p-8 shadow-sky-600 bg-gray-900/50 rounded-lg shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1">
+                   <div class="mb-6">
+                       <i class="fas fa-bullseye text-5xl text-sky-500"></i>
+                   </div>
+                   <h2 class="text-4xl font-bold text-sky-500 mb-6">Our Mission</h2>
+                   <p class="text-gray-100 text-lg leading-relaxed">
+                    "To empower businesses and communities in Africa with world-class AI services 
+                    and tailored software solutions, fostering innovation and sustainable growth."
+                   </p>
+               </div>
+
+               <!-- Goals -->
+               <div class="text-center p-8 shadow-sky-600 bg-gray-900/50 rounded-lg shadow-sm hover:shadow-md hover:shadow-sky-600 transition duration-300 transform hover:-translate-y-1 md:col-span-2">
+                   <div class="mb-6">
+                       <i class="fas fa-flag text-5xl text-sky-500"></i>
+                   </div>
+                   <h2 class="text-4xl font-bold text-sky-500 mb-6">Our Goals</h2>
+                   <p class="text-gray-100 text-lg leading-relaxed">
+                    Establish leadership in AI services across Africa. Develop advanced, scalable software solutions tailored to diverse industries. Promote innovation and drive technological progress in the African tech ecosystem.
+                   </p>
+               </div>
+           </div>
+       </div>
+   </section>
+   
+    <!-- Footer -->
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">About Incuti</h3>
+                <p>Empowering businesses with AI solutions.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-sky-500">Home</a></li>
+                    <li><a href="#" class="hover:text-sky-500">Services</a></li>
+                    <li><a href="#" class="hover:text-sky-500">About Us</a></li>
+                    <li><a href="#" class="hover:text-sky-500">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p>Email: info@incuti.ai</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-sky-500">
+                        <i class="fab fa-facebook-f w-5 h-6 text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-sky-500">
+                        <i class="fab fa-instagram w-5 h-6 text-2xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-sky-500">
+                        <i class="fab fa-x-twitter w-5 h-6 text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center">
+            <p>&copy; 2023 Incuti AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+
+        // mobile responsive 
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+
+
+    </script>
+</body>
+</html>
